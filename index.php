@@ -1,4 +1,17 @@
 <?php
+$links = [
+  ["https://duluth.chandlerswift.com/", "ChandlerSwift @ Duluth", "Light switch, camera, and other projects at my place"],
+  ["https://duluth.chandlerswift.com/light/", "Light Switch", "Using an ESP8266 and a relay to control my lights (check out the blog for more info)"],
+  ["/piano-heatmap/", "Piano Heatmap", "Takes MIDI dumps and performs per-key frequency analysis"],
+  ["/villnow-lighting/", "Villnow Lighting", "Controlling Belkin Wemo lights with an HTML/PHP interface (unfinished)"],
+  ["https://github.com/ChandlerSwift/RaceClock", "RaceClock", "Records go-kart and dirt bike race times and displays per-racer stats (deprecated)"],
+  ["https://github.com/ChandlerSwift/SmartLocker", "SmartLocker", "Technology enhancements for high school lockers"],
+  ["minecraft-social-laravel-test/public/", "MinecraftSocial", "An experimental Laravel port of my social network for Minecraft users, with posts, chat, announcements, and more!"],
+  ["/moodle/", "Moodle", "Needs no introduction. Not my project, I'm just doing some modifications."],
+  ["/resume/", "HTML Resume", "Outdated and unfinished. As seen on <a href='https://github.com/lduo/resume/'>github.com/lduo/resume</a>"],
+  ["/mss/", "MeetStatusScreen", "For my FIRST Robotics team 4665"]
+];
+
 $colors = ["red", "amber", "blue", "green", "deeporange", "deeppurple", "teal"];
 $i = 0;
 $left = false;
@@ -15,7 +28,6 @@ function side_and_color() {
   <title>Experiments &middot; ChandlerSwift.com</title>
   <meta name="description" content="Some web hacks I've thrown together over the years">
   <meta name="author" content="Chandler Swift">
-  <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,300italic,400italic' rel='stylesheet' type='text/css'>
   <style>
   * {
@@ -85,32 +97,12 @@ function side_and_color() {
     background-color:#F44336;
     color:#fff;
   }
-  .pink {
-    background-color:#E91E63;
-    color:#fff;
-  }
-  .purple {
-    background-color:#9C27B0;
-    color:#fff;
-  }
   .deeppurple {
     background-color:#673AB7;
     color:#fff;
   }
-  .indigo {
-    background-color:#3F51B5;
-    color:#fff;
-  }
   .blue {
     background-color:#2196F3;
-    color:#fff;
-  }
-  .lightblue {
-    background-color:#03A9F4;
-    color:#fff;
-  }
-  .cyan {
-    background-color:#00BCD4;
     color:#fff;
   }
   .teal {
@@ -121,36 +113,12 @@ function side_and_color() {
     background-color:#4CAF50;
     color:#fff;
   }
-  .lightgreen {
-    background-color:#8BC34A;
-    color:#fff;
-  }
-  .lime {
-    background-color:#CDDC39;
-    color:#fff;
-  }
-  .yellow {
-    background-color:#FFEB3B;
-    color:#fff;
-  }
   .amber {
     background-color:#FFC107;
     color:#fff;
   }
-  .orange {
-    background-color:#FF9800;
-    color:#fff;
-  }
   .deeporange {
     background-color:#FF5722;
-    color:#fff;
-  }
-  .brown {
-    background-color:#795548;
-    color:#fff;
-  }
-  .grey {
-    background-color:#9E9E9E;
     color:#fff;
   }
   .white-on-black {
@@ -168,65 +136,13 @@ function side_and_color() {
     <h1 class="title"><span class="heavy-text">Experiments &middot;</span> <a href="https://chandlerswift.com">ChandlerSwift.com</a></h1>
     <h2 class="subtitle">Some web hacks I've thrown together <span title="@villnoweric">(or contributed to)</span> over the years (see <a href="https://github.com/ChandlerSwift/">GitHub</a>)</h2>
   </div>
-  <a href="https://duluth.chandlerswift.com/">
+  <?php foreach ($links as $link): ?>
+  <a href="<?= $link[0] ?>">
     <div class="container-<?= side_and_color() ?> link">
-      <div class="title">ChandlerSwift @ Duluth</div>
-      <div class="description">Light switch, camera, and other projects at my place</div>
+      <div class="title"><?= $link[1] ?></div>
+      <div class="description"><?= $link[2] ?></div>
     </div>
   </a>
-  <a href="https://duluth.chandlerswift.com/light/">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">Light Switch</div>
-      <div class="description">Using an ESP8266 and a relay to control my lights (see also <a href="https://blog.chandlerswift.com/2017/esp8266-light-switch-a-few-revisions/">blog</a> for more info)</div>
-    </div>
-  </a>
-  <a href="/piano-heatmap/">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">Piano Heatmap</div>
-      <div class="description">Takes MIDI dumps and performs per-key frequency analysis</div>
-    </div>
-  </a>
-  <a href="/villnow-lighting/">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">Villnow Lighting</div>
-      <div class="description">Controlling Belkin Wemo lights with an HTML/PHP interface</div>
-    </div>
-  </a>
-  <a href="https://github.com/ChandlerSwift/RaceClock">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">RaceClock</div>
-      <div class="description">Records go-kart and dirt bike race times and displays per-racer stats</div>
-    </div>
-  </a>
-  <a href="https://github.com/ChandlerSwift/SmartLocker">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">SmartLocker</div>
-      <div class="description">Technology enhancements for High School lockers (still a work in progress!)</div>
-    </div>
-  </a>
-  <a href="minecraft-social-laravel-test/public/">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">MinecraftSocial</div>
-      <div class="description">A Laravel port of my Social Network for Minecraft Users: Posts, Chat, Announcements, and more!</div>
-    </div>
-  </a>
-  <a href="/moodle/">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">Moodle</div>
-      <div class="description">Not my project, exactly, but I'm doing some work on it.</div>
-    </div>
-  </a>
-  <a href="/resume/">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">HTML Resume</div>
-      <div class="description">as seen on github.com/lduo/resume</div>
-    </div>
-  </a>
-  <a href="/mss/">
-    <div class="container-<?= side_and_color() ?> link">
-      <div class="title">MeetStatusScreen</div>
-      <div class="description">For my FRC team 4665</div>
-    </div>
-  </a>
+  <?php endforeach; ?>
 </body>
 </html>
