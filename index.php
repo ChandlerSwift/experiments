@@ -5,11 +5,11 @@ $links = [
   ["/piano-heatmap/", "Piano Heatmap", "Takes MIDI dumps and performs per-key frequency analysis"],
   ["/villnow-lighting/", "Villnow Lighting", "Controlling Belkin Wemo lights with an HTML/PHP interface (unfinished)"],
   ["https://github.com/ChandlerSwift/RaceClock", "RaceClock", "Records go-kart and dirt bike race times and displays per-racer stats (deprecated)"],
-  ["https://github.com/ChandlerSwift/SmartLocker", "SmartLocker", "Technology enhancements for high school lockers"],
-  ["minecraft-social-laravel-test/public/", "MinecraftSocial", "An experimental Laravel port of my social network for Minecraft users, with posts, chat, announcements, and more!"],
-  ["/moodle/", "Moodle", "Needs no introduction. Not my project, I'm just doing some modifications."],
+  //["https://github.com/ChandlerSwift/SmartLocker", "SmartLocker", "Technology enhancements for high school lockers"],
+  //["minecraft-social-laravel-test/public/", "MinecraftSocial", "An experimental Laravel port of my social network for Minecraft users, with posts, chat, announcements, and more!"],
+  //["/moodle/", "Moodle", "Needs no introduction. Not my project, I'm just doing some modifications."],
   ["/resume/", "HTML Resume", "Outdated and unfinished. As seen on <a href='https://github.com/lduo/resume/'>github.com/lduo/resume</a>"],
-  ["/mss/", "MeetStatusScreen", "For my FIRST Robotics team 4665"]
+  ["/mss/", "MeetStatusScreen", "For my FIRST Robotics team 4665 (currently no data)"]
 ];
 
 $colors = ["red", "amber", "blue", "green", "deeporange", "deeppurple", "teal"];
